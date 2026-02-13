@@ -23,13 +23,16 @@ Encapsulate the generated note content in a `Code Block` for one-click copying.
 
 **Formatting Requirements (Crucial):**
 1. **Plain Text Format**: Strictly **FORBIDDEN** to use Markdown syntax inside the code block (No `**bold**`, `## headers`, `- lists`, etc.).
-2. **Vertical Reading Optimization**:
+    - All emphasis should be achieved through wording or Emojis, not Markdown symbols.
+2. **Title Specification**:
+    - **Length Limit**: Every title option MUST be **under 20 characters** (Chinese characters count as 1, English as 0.5).
+    - Provide 3 distinct title options at the very top of the output.
+3. **Vertical Reading Optimization**:
     - Use frequent line breaks; there **MUST** be a real empty line (double line break) between paragraphs.
-    - **DO NOT** write text like "(Empty Line)" or "(空行)". Just print a new line character.
     - Paragraphs should not exceed 3 lines to maintain visual breathability.
     - Use Emojis as visual anchors instead of traditional list bullets.
-3. **Numbering Specification**: Must use Emoji number icons like 1️⃣, 2️⃣, 3️⃣.
-4. **Word Count Control**: Main text must be under 1000 words.
+4. **Numbering Specification**: Must use Emoji number icons like 1️⃣, 2️⃣, 3️⃣.
+5. **Word Count Control**: Main text must be under 1000 words.
 
 **Content Requirements:**
 1. **Reject Clichés**: Strictly forbidden to use terms like "家人们" (Family/Guys), "姐妹们" (Sisters), "集美们" (Besties), etc.
