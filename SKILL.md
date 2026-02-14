@@ -13,13 +13,13 @@ Read the user-provided [Article Content] or [Topic], analyze the style and audie
 
 ## Workflow & Constraints
 
-### Step 1: Analysis & Reporting (Output OUTSIDE the Code Block)
-Before writing the note, you must output the following information:
+### Step 1: Strategy Analysis (策略分析)
+Before writing the note, you must output a "Thinking" section:
 1. **📊 Word Count**: [Statistical number of original text]
 2. **🧠 Strategy Analysis**: Briefly describe the tone you determined (e.g., cool/aloof, academic, healing, minimalist, etc.) and the target audience.
 
 ### Step 2: Note Generation (MUST be encapsulated in a Code Block)
-Encapsulate the generated note content in a `Code Block` for one-click copying.
+Encapsulate the generated note content in a `Code Block`.
 
 **Formatting Requirements (Crucial):**
 1. **Plain Text Format**: Strictly **FORBIDDEN** to use Markdown syntax inside the code block (No `**bold**`, `## headers`, `- lists`, etc.).
@@ -27,36 +27,20 @@ Encapsulate the generated note content in a `Code Block` for one-click copying.
 2. **Title Specification**:
     - **Length Limit**: Every title option MUST be **under 20 characters** (Chinese characters count as 1, English as 0.5).
     - Provide 3 distinct title options at the very top of the output.
-3. **Vertical Reading Optimization**:
-    - Use frequent line breaks; there **MUST** be a real empty line (double line break) between paragraphs.
-    - Paragraphs should not exceed 3 lines to maintain visual breathability.
-    - Use Emojis as visual anchors instead of traditional list bullets.
+3. **Vertical Reading Optimization**: Use frequent line breaks, Emoji anchors, and clear paragraph spacing.
 4. **Numbering Specification**: Must use Emoji number icons like 1️⃣, 2️⃣, 3️⃣.
-5. **Word Count Control**: Main text must be under 1000 words.
 
-**Content Requirements:**
-1. **Reject Clichés**: Strictly forbidden to use terms like "家人们" (Family/Guys), "姐妹们" (Sisters), "集美们" (Besties), etc.
-2. **Pure Sharing**: Strictly forbidden to include any Call to Action (CTA) like "Follow me," "Like this," "Go buy it," etc.
-3. **Title Design**: Provide 3 distinct title options at the very top of the output.
-
-### Step 3: Interactive Title Selection
+### Step 3: Interactive Title Selection & Saving
 1.  **Output**: Display the 3 generated titles to the user.
 2.  **Interaction**: Ask: "Please select a title (1-3) or type a custom one."
 3.  **Action**:
-    *   Read the user's input.
-    *   If input is '1', '2', or '3', pick the corresponding title from the generated list.
-    *   If input is text, use it as the custom title.
-    *   **Rewrite the file**: Replace the first few lines (title options) of the saved note file with the *single* selected title.
-
-### Step 4: Save to File
-After generating the note (and updating the title), you MUST automatically save the exact content to a local Markdown file (e.g., `xiaohongshu_note.md` or a name derived from the title). Use the `write_file` tool for this.
+    *   Once a title is selected, update the note content with ONLY that title at the top.
+    *   **Save to File**: Save the final note to `content/xiaohongshu/[topic-name]/02-xhs-note.md` using `write_file`.
 
 ## Output Example Structure (Inside Code Block)
 
 ```text
-(Title Option 1)
-(Title Option 2)
-(Title Option 3)
+(Selected Title)
 
 (First paragraph of main text, cutting straight to the point...)
 
